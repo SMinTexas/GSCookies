@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6E91386D-4D1B-43B2-B16E-2F160A04BFB3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GirlScoutCookies</RootNamespace>
+    <AssemblyName>GirlScoutCookies</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EASendMail45, Version=7.3.1.8, Culture=neutral, PublicKeyToken=88adb80ecd66540b, processorArchitecture=MSIL">
+      <HintPath>..\packages\EASendMail.7.3.1.8\lib\net45\EASendMail45.dll</HintPath>
+    </Reference>
+    <Reference Include="Reports, Version=0.9.5821.33855, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Report.NET.0.09.06\lib\net452\Reports.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Booths.cs" />
+    <Compile Include="Classes\Cookies.cs" />
+    <Compile Include="Classes\Customers.cs" />
+    <Compile Include="Classes\DB.cs" />
+    <Compile Include="Classes\Deposits.cs" />
+    <Compile Include="Classes\DisplayInfo.cs" />
+    <Compile Include="Classes\EnrollUser.cs" />
+    <Compile Include="Classes\EntryValidation.cs" />
+    <Compile Include="Classes\ForgotPassword.cs" />
+    <Compile Include="Classes\Orders.cs" />
+    <Compile Include="Classes\PasswordOperations.cs" />
+    <Compile Include="Classes\Roster.cs" />
+    <Compile Include="Classes\Sales.cs" />
+    <Compile Include="Classes\SystemMessages.cs" />
+    <Compile Include="Classes\Troops.cs" />
+    <Compile Include="Forms\Cookies\frmAddCookie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cookies\frmAddCookie.Designer.cs">
+      <DependentUpon>frmAddCookie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customers\frmAddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customers\frmAddCustomer.Designer.cs">
+      <DependentUpon>frmAddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Archive\frmArchive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Archive\frmArchive.Designer.cs">
+      <DependentUpon>frmArchive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customers\frmCustomerUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customers\frmCustomerUpdate.Designer.cs">
+      <DependentUpon>frmCustomerUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Booths\frmBoothClose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Booths\frmBoothClose.Designer.cs">
+      <DependentUpon>frmBoothClose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDeposits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDeposits.Designer.cs">
+      <DependentUpon>frmDeposits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Girls\frmUpdateGirl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Girls\frmUpdateGirl.Designer.cs">
+      <DependentUpon>frmUpdateGirl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sales\frmSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sales\frmSales.Designer.cs">
+      <DependentUpon>frmSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Troops\frmUpdateMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Troops\frmUpdateMember.Designer.cs">
+      <DependentUpon>frmUpdateMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Troops\frmAddRoster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Troops\frmAddRoster.Designer.cs">
+      <DependentUpon>frmAddRoster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Booths\frmBooths.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Booths\frmBooths.Designer.cs">
+      <DependentUpon>frmBooths.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cookies\frmCookieUpdates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cookies\frmCookieUpdates.Designer.cs">
+      <DependentUpon>frmCookieUpdates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inventory\frmCookieTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inventory\frmCookieTransfer.Designer.cs">
+      <DependentUpon>frmCookieTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inventory\frmOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inventory\frmOrders.Designer.cs">
+      <DependentUpon>frmOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reinstate\frmReinstate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reinstate\frmReinstate.Designer.cs">
+      <DependentUpon>frmReinstate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Troops\frmAddTroop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Troops\frmAddTroop.Designer.cs">
+      <DependentUpon>frmAddTroop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main Screen\frmForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main Screen\frmForgotPassword.Designer.cs">
+      <DependentUpon>frmForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Girls.cs" />
+    <Compile Include="Classes\Login.cs" />
+    <Compile Include="Classes\PasswordAdvisor.cs" />
+    <Compile Include="Classes\PasswordHint.cs" />
+    <Compile Include="Classes\TroopInfo.cs" />
+    <Compile Include="Classes\User.cs" />
+    <Compile Include="Forms\Girls\frmAddGirl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Girls\frmAddGirl.Designer.cs">
+      <DependentUpon>frmAddGirl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Users\frmAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users\frmAddUser.Designer.cs">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main Screen\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main Screen\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Girls\frmPromoteGirl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Girls\frmPromoteGirl.Designer.cs">
+      <DependentUpon>frmPromoteGirl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Cookies\frmAddCookie.resx">
+      <DependentUpon>frmAddCookie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customers\frmAddCustomer.resx">
+      <DependentUpon>frmAddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Archive\frmArchive.resx">
+      <DependentUpon>frmArchive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customers\frmCustomerUpdate.resx">
+      <DependentUpon>frmCustomerUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Booths\frmBoothClose.resx">
+      <DependentUpon>frmBoothClose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDeposits.resx">
+      <DependentUpon>frmDeposits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Girls\frmUpdateGirl.resx">
+      <DependentUpon>frmUpdateGirl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sales\frmSales.resx">
+      <DependentUpon>frmSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Troops\frmUpdateMember.resx">
+      <DependentUpon>frmUpdateMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Troops\frmAddRoster.resx">
+      <DependentUpon>frmAddRoster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Booths\frmBooths.resx">
+      <DependentUpon>frmBooths.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cookies\frmCookieUpdates.resx">
+      <DependentUpon>frmCookieUpdates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inventory\frmCookieTransfer.resx">
+      <DependentUpon>frmCookieTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inventory\frmOrders.resx">
+      <DependentUpon>frmOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reinstate\frmReinstate.resx">
+      <DependentUpon>frmReinstate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Girls\frmAddGirl.resx">
+      <DependentUpon>frmAddGirl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Troops\frmAddTroop.resx">
+      <DependentUpon>frmAddTroop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users\frmAddUser.resx">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main Screen\frmForgotPassword.resx">
+      <DependentUpon>frmForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main Screen\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Girls\frmPromoteGirl.resx">
+      <DependentUpon>frmPromoteGirl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Components\" />
+    <Folder Include="Forms\Deposits\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
